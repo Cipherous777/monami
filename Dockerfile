@@ -5,9 +5,11 @@ WORKDIR /app
 # Copy requirements without torch
 COPY requirements.txt .
 
-# Install PyTorch CPU separately
-RUN pip install --no-cache-dir torch==2.8.0 -f https://download.pytorch.org/whl/cpu/torch_stable.html
+# Upgrade pip to latest version
+RUN pip install --upgrade pip
 
+# Install PyTorch CPU (compatible version)
+RUN pip install --no-cache-dir torch==2.8.0 -f https://download.pytorch.org/whl/cpu/torch_stable.html
 
 # Install other dependencies
 RUN pip install --no-cache-dir -r requirements.txt
