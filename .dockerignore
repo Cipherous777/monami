@@ -1,6 +1,30 @@
+# Python cache and virtual environments
 __pycache__/
 *.pyc
-.git
-.env
+*.pyo
+*.pyd
+.venv/
+env/
+ENV/
+venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docker files
+docker-compose*.yml
+
+# Node stuff (if any)
 node_modules/
-data/
+
+# Logs
+*.log
+
+# Git should **not** be ignored for Render
+# .git
+
+# Ignore IDE/editor files
+.vscode/
+.idea/
+*.swp
