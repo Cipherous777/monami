@@ -6,7 +6,8 @@ WORKDIR /app
 COPY requirements.txt .
 
 # Install PyTorch CPU separately
-RUN pip install --no-cache-dir torch==2.8.0+cpu -f https://download.pytorch.org/whl/cpu/torch_stable.html
+RUN pip install --no-cache-dir torch==2.8.0 -f https://download.pytorch.org/whl/cpu/torch_stable.html
+
 
 # Install other dependencies
 RUN pip install --no-cache-dir -r requirements.txt
