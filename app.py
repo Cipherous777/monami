@@ -12,7 +12,7 @@ app.secret_key = "randomsecret"
 
 # ===== GPT-2 Setup =====
 device = "cuda" if torch.cuda.is_available() else "cpu"
-model_name = "gpt2"
+model_name = "distilgpt2"
 
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name)
